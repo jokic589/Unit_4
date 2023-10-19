@@ -1,0 +1,65 @@
+# Shorter Double Dice
+import random
+
+count = 0
+while True:
+    roll1 = random.randrange(1, 6)
+    roll2 = random.randrange(1, 6)
+    total = roll1 + roll2
+    print(f"Roll 1: {roll1}")
+    print(f"Roll 2: {roll2}")
+    print(f"The total is {total}!")
+    count += 1
+    if count == 10:
+        break
+
+
+# Again with the Number Guessing
+import random
+
+number = random.randrange(1, 11)
+count = 0
+guess = int(input("I am thinking of a number from 1 to 10. Try to Guess it. "))
+
+while True:
+    count = count + 1
+
+    if guess == number:
+        print(f"That's right! It took {count} guesses. ")
+        break
+    else:
+        guess = int(input("Incorrect. Guess again. "))
+
+
+# Safe Square Root
+import math
+
+print("SQUARE ROOT!")
+guess = int(input("Enter a number: "))
+
+while guess > 0:
+    root = math.sqrt(guess)
+    print(f"The square root of {guess} is {root}. ")
+    break
+else:
+    print("You can't square root a negative number. ")
+
+
+# Right Triangle Checker
+print("Enter three integers: ")
+side_1 = int(input("Side 1: "))
+side_2 = int(input("Side 2: "))
+
+while True:
+    if side_2 > side_1:
+        side_3 = int(input("Side 3: "))
+        break
+    else:
+        print("Enter a side larger than the previous one. ")
+        side_2 = int(input("Side 2: "))
+        continue
+
+if side_1 * side_1 + side_2 * side_2 == side_3 * side_3:
+    print("It is a right triangle. ")
+else:
+    print("It is not a right triangle. ")
