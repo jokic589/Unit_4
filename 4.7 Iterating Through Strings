@@ -1,0 +1,17 @@
+# Activity 1
+message = input("Message: ")
+
+for char in message:
+    print(f"{char}{char}")
+
+# Vowels
+original = "abcdefghijklmnopqrstuvwxyz"
+new_string = ""
+
+for char in original:
+    if char in "aeiouy":
+        new_string += "-"
+    else:
+        new_string += char
+
+print(new_string)
